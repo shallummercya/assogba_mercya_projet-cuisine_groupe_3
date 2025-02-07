@@ -13,7 +13,7 @@
 <body>
     
 <!-- 1. Barre de navigation -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-white">
     <div class="container">
         <a class="navbar-brand" href="#">Restaurant</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -38,23 +38,147 @@
     </div>
 </nav>
 
-
-
 <!--  2. Section d’accueil -->
-<header class="hero bg-dark text-white py-5">
+<header class="hero">
     <div class="container">
-        <div class="row justify-content-between">
-         <div class="col-4">
-           <h1>Taste our Delicious Food</h1>
-           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis ipsum eos assumenda perferendis et suscipit!</p>
-           <a href="#" class="btn btn-primary">See Menu</a>
-         </div>
-         <div class="col-6">
-            <img src="assets\images\salade.jpg"  class="w-100">    
-        </div>
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <h1>Taste Our Delicious Foods</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Habitant eget nunc, leo id lacus faucibus donec risus.</p>
+                <a href="#" class="btn">See Menu</a>
+            </div>
+            <div class="col-md-6 text-center">
+                <img src="assets/images/salade.jpg" class="img-fluid">
+            </div>
         </div>
     </div>
 </header>
+
+
+ <!-- Cartes d'infos -->
+  <div class="container">
+   <div class="row info-cards">
+    <div class="col-md-3">
+        <div class="info-card">
+            <i class="fas fa-clock"></i>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
+                <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z"/>
+                <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0"/>
+              </svg>
+            <h5>Today 10:00 am - 11:00 pm</h5>
+            <p>Opening Hours</p>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="info-card">
+            <i class="fas fa-phone"></i>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
+                <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
+              </svg>
+            <h5>(321) +52 226 336 52</h5>
+            <p>Call help center</p>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="info-card">
+            <i class="fas fa-chair"></i>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard2-check" viewBox="0 0 16 16">
+                <path d="M9.5 0a.5.5 0 0 1 .5.5.5.5 0 0 0 .5.5.5.5 0 0 1 .5.5V2a.5.5 0 0 1-.5.5h-5A.5.5 0 0 1 5 2v-.5a.5.5 0 0 1 .5-.5.5.5 0 0 0 .5-.5.5.5 0 0 1 .5-.5z"/>
+                <path d="M3 2.5a.5.5 0 0 1 .5-.5H4a.5.5 0 0 0 0-1h-.5A1.5 1.5 0 0 0 2 2.5v12A1.5 1.5 0 0 0 3.5 16h9a1.5 1.5 0 0 0 1.5-1.5v-12A1.5 1.5 0 0 0 12.5 1H12a.5.5 0 0 0 0 1h.5a.5.5 0 0 1 .5.5v12a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5z"/>
+                <path d="M10.854 7.854a.5.5 0 0 0-.708-.708L7.5 9.793 6.354 8.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0z"/>
+              </svg>
+            <h5>10 Family, 25 Couple</h5>
+            <p>Available Seats</p>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="info-card">
+            <i class="fas fa-calendar"></i>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar" viewBox="0 0 16 16">
+                <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z"/>
+              </svg>
+            <h5>Saturday - 25 Jul, 2020</h5>
+            <p>Next Event</p>
+        </div>
+     </div>
+</div>
+</div>
+</div>
+</section>
+
+
+<!-- Section About -->
+<section class="about-section">
+    <div class="container">
+        <div class="row">
+            <!-- Image avec effet -->
+            <div class="col-md-5 position-relative">
+                <div class="image-container">
+                    <img src="https://i.pinimg.com/736x/77/52/60/775260464661ad6c17889c4a670ae0c1.jpg" class="img-fluid rounded-circle">
+                    <div class="background-shape"></div>
+                </div>
+            </div>
+            <!-- Contenu texte -->
+            <div class="col-md-7">
+                <h6 class="text-warning">About Us</h6>
+                <h2>Food is an Important Part of your Health</h2>
+                <p>
+                    Felis ultrices nullam mauris cursus sit morbi nunc. Adipiscing purus mattis justo convallis egestas odio leo. 
+                    Integer quisque turpis orci aenean. Sed faucibus morbi blandit integer quisque.
+                </p>
+                <a href="#" class="btn btn-primary">See More</a>
+            </div>
+        </div>
+
+       
+
+<!--  3. Section des recettes populaires -->
+<section class="container py-5">
+    <h2 class="text-center mb-4">Recettes Populaires</h2>
+    <div class="row">
+        <!-- Carte recette 1 -->
+        <div class="col-md-4">
+            <div class="card position-relative">
+                <img src="https://www.bibamagazine.fr/wp-content/uploads/biba/2016/11/Comment-reussir-ses-photos-de-nourriture-sur-Instagram.jpg" class="card-img-top" alt="Recette 1">
+                <span class="price-badge">$15.00</span>
+                <div class="card-body text-center">
+                    <h5 class="card-title">Pâtes à la Carbonara</h5>
+                    <p class="card-text">Une recette italienne classique, rapide et savoureuse.</p>
+                    <a href="#" class="btn btn-secondary">Add to Cart 🛒</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Carte recette 2 -->
+        <div class="col-md-4">
+            <div class="card position-relative">
+                <img src="https://i.pinimg.com/736x/ee/13/22/ee132252969f1681245deea7dc04f5af.jpg" class="card-img-top" alt="Recette 1">
+                <span class="price-badge">$15.00</span>
+                <div class="card-body text-center">
+                    <h5 class="card-title">Riz au cury</h5>
+                    <p class="card-text">Une recette italienne classique, rapide et savoureuse.</p>
+                    <a href="#" class="btn btn-secondary">Add to Cart 🛒</a>
+                </div>
+            </div>
+        </div>        
+
+        <!-- Carte recette 3 -->
+        <div class="col-md-4">
+            <div class="card position-relative">
+                <img src="https://i.pinimg.com/474x/7b/e5/68/7be568e566d6c5ac54ac5e21ccb42498.jpg" class="card-img-top" alt="Recette 1">
+                <span class="price-badge">$15.00</span>
+                <div class="card-body text-center">
+                    <h5 class="card-title">Tarte à la fraise</h5>
+                    <p class="card-text">Une recette italienne classique, rapide et savoureuse.</p>
+                    <a href="#" class="btn btn-secondary">Add to Cart 🛒</a>
+                </div>
+            </div>
+        </div>        
+    </div>
+    
+</section>
+
+
 
 
 

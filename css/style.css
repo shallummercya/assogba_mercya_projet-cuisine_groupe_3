@@ -1,17 +1,206 @@
-/* Style du bouton personnalisé */
-.btn-primary {
-    background-color: #FEB618;  /* Couleur orange */
-    border-color: #FEB618;      /* Bordure orange */
-    color: #000;                /* Texte noir pour le contraste */
-    font-weight: bold;          /* Texte en gras */
-    padding: 10px 20px;         /* Espacement intérieur */
-    border-radius: 5px;         /* Bords arrondis */
-    transition: background-color 0.3s ease-in-out;
+.hero {
+    background-color: #f8f8f8; /* Couleur de fond claire */
+    padding: 60px 0;
+    display: flex;
+    align-items: center;
 }
 
-/* Effet au survol */
+.hero .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #222; /* Noir profond */
+}
+
+.hero p {
+    color: #666;
+    font-size: 1.1rem;
+    max-width: 500px;
+}
+
+.hero .btn {
+    background-color: #FFC107; /* Jaune moderne */
+    color: black;
+    font-weight: bold;
+    padding: 12px 20px;
+    border-radius: 30px;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+}
+
+.hero .btn:hover {
+    background-color: #E0A800;
+    transform: scale(1.05);
+}
+
+.hero img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Élément graphique de fond */
+.hero::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 40%;
+    height: 80%;
+    background: #FFC107;
+    clip-path: circle(50% at 90% 50%);
+    z-index: -1;
+}
+
+
+
+/* Assure que toutes les images des cartes ont la même taille */
+.card-img-top {
+    width: 100%;              /* Ajuste la largeur automatiquement */
+    height: 200px;            /* Hauteur fixe pour toutes les images */
+    object-fit: cover;        /* Coupe l’image pour remplir sans déformation */
+    border-top-left-radius: 5px;  /* Assure un arrondi cohérent avec la carte */
+    border-top-right-radius: 5px;
+}
+.about-section {
+    padding: 60px 0;
+    background-color: #fff;
+}
+
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+
+.image-container img {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 50%;
+    z-index: 1;
+    position: relative;
+}
+
+.background-shape {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background: #FFC107;
+    border-radius: 20px;
+    bottom: -10px;
+    left: -20px;
+    z-index: 0;
+}
+
+.text-warning {
+    color: #FFA500;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+p {
+    color: #666;
+    font-size: 1rem;
+}
+
+.btn-primary {
+    background-color: #FFC107;
+    color: black;
+    font-weight: bold;
+    padding: 12px 20px;
+    border-radius: 30px;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+    border: none;
+}
+
 .btn-primary:hover {
-    background-color: #e6a600;  /* Un orange légèrement plus foncé */
-    border-color: #e6a600;
-    color: #fff;                /* Texte blanc pour un effet visuel */
+    background-color: #E0A800;
+    transform: scale(1.05);
+}
+
+/* Styles des cartes d'infos */
+.info-cards {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.info-card {
+    background: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.info-card i {
+    font-size: 24px;
+    color: #FFA500;
+    margin-bottom: 10px;
+}
+
+.info-card h5 {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.info-card p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Style général des cartes */
+.card {
+    border-radius: 15px; /* Arrondi des coins */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    overflow: hidden; /* Évite les débordements */
+    border: none; /* Supprime les bordures */
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05); /* Effet de zoom au survol */
+}
+
+/* Uniformiser la taille des images */
+.card-img-top {
+    width: 100%;
+    height: 200px; /* Ajuste la hauteur */
+    object-fit: cover; /* Assure une découpe propre */
+}
+
+/* Ajout du prix en haut à droite */
+.price-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #FFD700; /* Jaune doré */
+    color: black;
+    padding: 5px 10px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+/* Personnalisation des boutons */
+.btn-secondary {
+    background-color: #FFC107; /* Jaune */
+    color: black;
+    font-weight: bold;
+    border: none;
+    width: 100%;
+    text-align: center;
+}
+
+.btn-secondary:hover {
+    background-color: #E0A800;
 }
