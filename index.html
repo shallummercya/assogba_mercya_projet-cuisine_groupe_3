@@ -9,13 +9,15 @@
     <!-- Lien vers notre CSS personnalisé -->
     <link rel="stylesheet" href="css\style.css">
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
 </head>
 <body>
     
-<!-- 1. Barre de navigation -->
-<nav class="navbar navbar-expand-lg navbar-light bg-white">
+<!-- Barre de navigation -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
     <div class="container">
-        <a class="navbar-brand" href="#">Restaurant</a>
+        <a class="navbar-brand fw-bold" href="#">Restaurant</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -27,161 +29,595 @@
                 <li class="nav-item"><a class="nav-link" href="#">Reserve</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
-                <li class="nav-item"><a class="nav-link" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
-                  </svg></a></li>
-                <li class="nav-item"><a class="nav-link" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
-                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
-                  </svg></a></li>
+                <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-search"></i></a></li>
+                <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-cart"></i></a></li>
             </ul>
         </div>
     </div>
 </nav>
 
-<!--  2. Section d’accueil -->
-<header class="hero">
+<!-- Section d’accueil -->
+<header class="hero bg-light py-5">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-md-6">
-                <h1>Taste Our Delicious Foods</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Habitant eget nunc, leo id lacus faucibus donec risus.</p>
-                <a href="#" class="btn">See Menu</a>
+                <h1 class="fw-bold">Taste Our Delicious Foods</h1>
+                <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <a href="#" class="btn btn-warning fw-bold text-dark rounded-pill px-4">See Menu</a>
             </div>
             <div class="col-md-6 text-center">
-                <img src="assets/images/salade.jpg" class="img-fluid">
+                <img src="assets/images/salade.jpg" class="img-fluid rounded shadow" alt="Salade">
             </div>
         </div>
     </div>
 </header>
 
+<!-- Cartes d'infos -->
+<div class="container py-5">
+    <div class="row text-center">
+        <div class="col-md-3">
+            <div class="card shadow p-4">
+                <i class="bi bi-clock display-6"></i>
+                <h5 class="mt-3"> 10:00 am - 11:00 pm</h5>
+                <p class="text-muted">Opening Hours</p>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card shadow p-4">
+                <i class="bi bi-telephone display-6"></i>
+                <h5 class="mt-3">(321) +52 226 336 52</h5>
+                <p class="text-muted">Call help center</p>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card shadow p-4">
+                <i class="bi bi-telephone display-6"></i>
+                <h5 class="mt-3">10 Familly, 25 Couples</h5>
+                <p class="text-muted">Available seats</p>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card shadow p-4">
+                <i class="bi bi-clipboard2-check display-6"></i>
+                <h5 class="mt-3">250+ Seats</h5>
+                <p class="text-muted">Book your table</p>
+            </div>
+        </div>
+    </div>
+</div>
 
- <!-- Cartes d'infos -->
-  <div class="container">
-   <div class="row info-cards">
-    <div class="col-md-3">
-        <div class="info-card">
-            <i class="fas fa-clock"></i>
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
-                <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z"/>
-                <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0"/>
-              </svg>
-            <h5>Today 10:00 am - 11:00 pm</h5>
-            <p>Opening Hours</p>
-        </div>
-    </div>
-    <div class="col-md-3">
-        <div class="info-card">
-            <i class="fas fa-phone"></i>
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
-                <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
-              </svg>
-            <h5>(321) +52 226 336 52</h5>
-            <p>Call help center</p>
-        </div>
-    </div>
-    <div class="col-md-3">
-        <div class="info-card">
-            <i class="fas fa-chair"></i>
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard2-check" viewBox="0 0 16 16">
-                <path d="M9.5 0a.5.5 0 0 1 .5.5.5.5 0 0 0 .5.5.5.5 0 0 1 .5.5V2a.5.5 0 0 1-.5.5h-5A.5.5 0 0 1 5 2v-.5a.5.5 0 0 1 .5-.5.5.5 0 0 0 .5-.5.5.5 0 0 1 .5-.5z"/>
-                <path d="M3 2.5a.5.5 0 0 1 .5-.5H4a.5.5 0 0 0 0-1h-.5A1.5 1.5 0 0 0 2 2.5v12A1.5 1.5 0 0 0 3.5 16h9a1.5 1.5 0 0 0 1.5-1.5v-12A1.5 1.5 0 0 0 12.5 1H12a.5.5 0 0 0 0 1h.5a.5.5 0 0 1 .5.5v12a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5z"/>
-                <path d="M10.854 7.854a.5.5 0 0 0-.708-.708L7.5 9.793 6.354 8.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0z"/>
-              </svg>
-            <h5>10 Family, 25 Couple</h5>
-            <p>Available Seats</p>
-        </div>
-    </div>
-    <div class="col-md-3">
-        <div class="info-card">
-            <i class="fas fa-calendar"></i>
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar" viewBox="0 0 16 16">
-                <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z"/>
-              </svg>
-            <h5>Saturday - 25 Jul, 2020</h5>
-            <p>Next Event</p>
-        </div>
-     </div>
-</div>
-</div>
-</div>
-</section>
 
 
 <!-- Section About -->
-<section class="about-section">
+<section class="about-section py-5 bg-light">
     <div class="container">
-        <div class="row">
+        <div class="row align-items-center">
             <!-- Image avec effet -->
-            <div class="col-md-5 position-relative">
-                <div class="image-container">
+            <div class="col-md-5 text-center">
+                <div class="position-relative">
                     <img src="https://i.pinimg.com/736x/77/52/60/775260464661ad6c17889c4a670ae0c1.jpg" class="img-fluid rounded-circle">
-                    <div class="background-shape"></div>
+                    <div class="position-absolute bg-warning rounded-3" style="width: 120px; height: 120px; bottom: -10px; left: -20px;"></div>
                 </div>
             </div>
             <!-- Contenu texte -->
             <div class="col-md-7">
-                <h6 class="text-warning">About Us</h6>
-                <h2>Food is an Important Part of your Health</h2>
-                <p>
-                    Felis ultrices nullam mauris cursus sit morbi nunc. Adipiscing purus mattis justo convallis egestas odio leo. 
+                <h6 class="text-warning fw-bold">About Us</h6>
+                <h2 class="fw-bold">Food is an Important Part of Your Health</h2>
+                <p class="text-secondary">
+                    Felis ultrices nullam mauris cursus sit morbi nunc. Adipiscing purus mattis justo convallis egestas odio leo.
                     Integer quisque turpis orci aenean. Sed faucibus morbi blandit integer quisque.
                 </p>
-                <a href="#" class="btn btn-primary">See More</a>
+                <a href="#" class="btn btn-warning fw-bold text-dark rounded-pill px-4">See More</a>
             </div>
         </div>
+    </div>
+</section>
 
-       
+<!-- Section des Offres -->
+<section class="container text-center py-5">
+    <h5 class="text-warning fw-bold">Delicious Foods</h5>
+    <h2 class="fw-bold">Our Daily Offers</h2>
+</section>
 
-<!--  3. Section des recettes populaires -->
+<!-- Section des Recettes Populaires -->
 <section class="container py-5">
-    <h2 class="text-center mb-4">Recettes Populaires</h2>
-    <div class="row">
+    <div class="row g-4">
         <!-- Carte recette 1 -->
         <div class="col-md-4">
-            <div class="card position-relative">
-                <img src="https://www.bibamagazine.fr/wp-content/uploads/biba/2016/11/Comment-reussir-ses-photos-de-nourriture-sur-Instagram.jpg" class="card-img-top" alt="Recette 1">
-                <span class="price-badge">$15.00</span>
+            <div class="card border-0 shadow position-relative">
+                <img src="https://i.pinimg.com/474x/86/66/66/8666662ce922b9f61ab87d3c8988237f.jpg" class="card-img-top" alt="Pâtes à la Carbonara">
+                <div class="position-absolute top-0 end-0 bg-warning text-dark fw-bold px-3 py-1 rounded-bottom-start">
+                    $15.00
+                </div>
                 <div class="card-body text-center">
                     <h5 class="card-title">Pâtes à la Carbonara</h5>
-                    <p class="card-text">Une recette italienne classique, rapide et savoureuse.</p>
-                    <a href="#" class="btn btn-secondary">Add to Cart 🛒</a>
+                    <p class="card-text text-secondary">Une recette italienne classique, rapide et savoureuse.</p>
+                    <a href="#" class="btn btn-warning w-100 fw-bold">Add to Cart 🛒</a>
                 </div>
             </div>
         </div>
 
         <!-- Carte recette 2 -->
         <div class="col-md-4">
-            <div class="card position-relative">
-                <img src="https://i.pinimg.com/736x/ee/13/22/ee132252969f1681245deea7dc04f5af.jpg" class="card-img-top" alt="Recette 1">
-                <span class="price-badge">$15.00</span>
+            <div class="card border-0 shadow position-relative">
+                <img src="https://i.pinimg.com/736x/ee/13/22/ee132252969f1681245deea7dc04f5af.jpg" class="card-img-top" alt="Riz au curry">
+                <div class="position-absolute top-0 end-0 bg-warning text-dark fw-bold px-3 py-1 rounded-bottom-start">
+                    $15.00
+                </div>
                 <div class="card-body text-center">
-                    <h5 class="card-title">Riz au cury</h5>
-                    <p class="card-text">Une recette italienne classique, rapide et savoureuse.</p>
-                    <a href="#" class="btn btn-secondary">Add to Cart 🛒</a>
+                    <h5 class="card-title">Riz au Curry</h5>
+                    <p class="card-text text-secondary">Un plat parfumé et réconfortant.</p>
+                    <a href="#" class="btn btn-warning w-100 fw-bold">Add to Cart 🛒</a>
                 </div>
             </div>
-        </div>        
+        </div>
 
         <!-- Carte recette 3 -->
         <div class="col-md-4">
-            <div class="card position-relative">
-                <img src="https://i.pinimg.com/474x/7b/e5/68/7be568e566d6c5ac54ac5e21ccb42498.jpg" class="card-img-top" alt="Recette 1">
-                <span class="price-badge">$15.00</span>
+            <div class="card border-0 shadow position-relative">
+                <img src="https://i.pinimg.com/474x/7b/e5/68/7be568e566d6c5ac54ac5e21ccb42498.jpg" class="card-img-top" alt="Tarte à la fraise">
+                <div class="position-absolute top-0 end-0 bg-warning text-dark fw-bold px-3 py-1 rounded-bottom-start">
+                    $15.00
+                </div>
                 <div class="card-body text-center">
-                    <h5 class="card-title">Tarte à la fraise</h5>
-                    <p class="card-text">Une recette italienne classique, rapide et savoureuse.</p>
-                    <a href="#" class="btn btn-secondary">Add to Cart 🛒</a>
+                    <h5 class="card-title">Tarte à la Fraise</h5>
+                    <p class="card-text text-secondary">Un dessert gourmand et fruité.</p>
+                    <a href="#" class="btn btn-warning w-100 fw-bold">Add to Cart 🛒</a>
                 </div>
             </div>
-        </div>        
+        </div>
     </div>
-    
+</section>
+<!-- Section Image Vidéo -->
+<section class="position-relative text-center">
+    <div class="container">
+        <img src="https://i.pinimg.com/736x/c6/8f/17/c68f1766bf4a18f4ad49c1f5f12a73e8.jpg" class="img-fluid w-100">
+        <a href="#" class="btn btn-warning position-absolute top-50 start-50 translate-middle fw-bold">Watch Video</a>
+    </div>
 </section>
 
+<!-- Section des Offres avec Boutons -->
+<section class="container text-center py-5">
+    <h5 class="text-warning fw-bold">Delicious Foods</h5>
+    <h2 class="fw-bold">Our Daily Offers</h2>
+    <div class="btn-group">
+        <button class="btn btn-outline-warning">Starter</button>
+        <button class="btn btn-warning active">Breakfast</button>
+        <button class="btn btn-outline-warning">Lunch</button>
+        <button class="btn btn-outline-warning">Dinner</button>
+        <button class="btn btn-outline-warning">Buffet</button>
+    </div>
+</section>
+
+<!-- Section des Menus -->
+<section class="container py-5">
+    <div class="row g-4">
+        <div class="col-md-6 col-lg-4">
+            <div class="card border-warning shadow-sm d-flex flex-row">
+                <div class="col-4">
+                    <img src="https://img.freepik.com/free-photo/club-sandwich-with-cheese-cucumber-tomato-smoked-meat-salami-served-with-french-fries_2829-19822.jpg?t=st=1741074333~exp=1741077933~hmac=dda8b2526c34588446266ff3c6afd40c5fa6e86f30a57066159a73a2f643c1b2&w=996" class="img-fluid rounded-start" alt="French Fry Meal">
+                </div>
+                <div class="col-8 p-3">
+                    <h5 class="d-flex justify-content-between">
+                        French Fry Meal <span class="badge bg-warning text-dark">$50</span>
+                    </h5>
+                    <p class="text-secondary">Ultricies egestas non turpis mauris.</p>
+                    <a href="#" class="btn btn-warning w-100 fw-bold">Add to Cart 🛒</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+            <div class="card border-warning shadow-sm d-flex flex-row">
+                <div class="col-4">
+                    <img src="https://img.freepik.com/free-photo/vertical-shot-delicious-hamburger-wooden-plate-with-black-background_181624-29765.jpg?t=st=1741074648~exp=1741078248~hmac=cee942b13f6514684163a0ef2be29273a87fbe9d7789c92df03bf98f3b8313da&w=900" class="img-fluid rounded-start" alt="Beef Cheez Burger">
+                </div>
+                <div class="col-8 p-3">
+                    <h5 class="d-flex justify-content-between">
+                        Beef Cheez Burger <span class="badge bg-warning text-dark">$50</span>
+                    </h5>
+                    <p class="text-secondary">Ultricies egestas non turpis mauris.</p>
+                    <a href="#" class="btn btn-warning w-100 fw-bold">Add to Cart 🛒</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+            <div class="card border-warning shadow-sm d-flex flex-row">
+                <div class="col-4">
+                    <img src="https://img.freepik.com/free-photo/sandwich-with-ham-fresh-vegetables_2829-13728.jpg?t=st=1741074798~exp=1741078398~hmac=77074bf71466a215f7873e0bfb8a371dd77074c90a53ecec01e988855a99c35c&w=826" class="img-fluid rounded-start" alt="Vegetable Sandwich">
+                </div>
+                <div class="col-8 p-3">
+                    <h5 class="d-flex justify-content-between">
+                        Vegetable Sandwich <span class="badge bg-warning text-dark">$50</span>
+                    </h5>
+                    <p class="text-secondary">Ultricies egestas non turpis mauris.</p>
+                    <a href="#" class="btn btn-warning w-100 fw-bold">Add to Cart 🛒</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+            <div class="card border-warning shadow-sm d-flex flex-row">
+                <div class="col-4">
+                    <img src="https://img.freepik.com/free-photo/sandwich-with-cheese-ham-juice-avocado-flat-lay-wooden-cutting-board_176474-8301.jpg?t=st=1741074896~exp=1741078496~hmac=4a72c2716f0a0ab6aaa5f21d5038fa70c784dfe578bfb0aad7b0eaf2ef8f0872&w=740" class="img-fluid rounded-start" alt="Cheddar Ranch Chicken Burger">
+                </div>
+                <div class="col-8 p-3">
+                    <h5 class="d-flex justify-content-between">
+                        Cheddar Ranch Chicken Burger <span class="badge bg-warning text-dark">$50</span>
+                    </h5>
+                    <p class="text-secondary">Ultricies egestas non turpis mauris.</p>
+                    <a href="#" class="btn btn-warning w-100 fw-bold">Add to Cart 🛒</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+            <div class="card border-warning shadow-sm d-flex flex-row">
+                <div class="col-4">
+                    <img src="https://img.freepik.com/free-photo/club-sandwich-with-orange-juice-black-glass-table_2831-735.jpg?t=st=1741075027~exp=1741078627~hmac=d52e2a9996791f833ecdd5307ad41359d3e3b001bfd95db584f08f6615144fdb&w=740" class="img-fluid rounded-start" alt="Vegetable Sandwich">
+                </div>
+                <div class="col-8 p-3">
+                    <h5 class="d-flex justify-content-between">
+                        Vegetable Sandwich <span class="badge bg-warning text-dark">$50</span>
+                    </h5>
+                    <p class="text-secondary">Ultricies egestas non turpis mauris.</p>
+                    <a href="#" class="btn btn-warning w-100 fw-bold">Add to Cart 🛒</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+            <div class="card border-warning shadow-sm d-flex flex-row">
+                <div class="col-4">
+                    <img src="https://img.freepik.com/free-photo/big-sandwich-with-roasted-vegetables-zucchini-eggplant-tomatoes-with-cheese-thyme-old-wooden-background_2829-16505.jpg?t=st=1741075157~exp=1741078757~hmac=7f71bdd8a2a00f78871ae6fb48b1ba0ab75528791a9690b9663437e2bfcb7270&w=826" class="img-fluid rounded-start" alt="Vegetable Sandwich">
+                </div>
+                <div class="col-8 p-3">
+                    <h5 class="d-flex justify-content-between">
+                        Vegetable Sandwich <span class="badge bg-warning text-dark">$50</span>
+                    </h5>
+                    <p class="text-secondary">Ultricies egestas non turpis mauris.</p>
+                    <a href="#" class="btn btn-warning w-100 fw-bold">Add to Cart 🛒</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section Témoignages -->
+<section class="py-5 bg-light">
+    <div class="container">
+     <div class="d-flex justify-content-between align-items-center mb-3">
+        <div class="text-left">
+            <h6 class="text-warning fw-bold">Testimonials</h6>
+            <h2 class="fw-bold">See Our Clients Feedback</h2>
+        </div>
+        <div>
+            <button class="btn btn-secondary me-2" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                <span class="fw-bold"></span>
+            </button>
+            <button class="btn btn-warning" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                <span class="fw-bold">></span>
+            </button>
+        </div>
+     </div>
+
+        <div id="testimonialCarousel" class="carousel slide mt-4" data-bs-ride="carousel">
+            <div class="carousel-inner">
+
+                <!-- Témoignage 1 -->
+                <div class="carousel-item active">
+                    <div class="row justify-content-left">
+                        <div class="col-md-5">
+                            <div class="card border-0 shadow-sm p-4">
+                                <div class="d-flex align-items-center">
+                                    <img src="https://i.pinimg.com/474x/ff/84/8e/ff848eb535a55e2da451e4dac1cd0d4d.jpg" class="rounded-circle me-3" alt="Client" style="width: 60px; height: 60px;">
+                                    <div>
+                                        <h5 class="mb-0 fw-bold">Jenifer Lofez</h5>
+                                        <small class="text-muted">Jenifer Lofez</small>
+                                    </div>
+                                </div>
+                                <p class="mt-3 text-muted">
+                                    Pulvinar aliquam mi pellentesque rhoncus. Gravida at id sit in massa ultricies sem adipiscing.
+                                </p>
+                                <div class="position-absolute top-0 end-0 bg-warning p-3 rounded-bottom-start">
+                                    <h2 class="text-white fw-bold">“</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-5 d-none d-md-block">
+                            <div class="card border-0 shadow-sm p-4">
+                                <div class="d-flex align-items-center">
+                                    <img src="https://i.pinimg.com/474x/07/33/ba/0733ba760b29378474dea0fdbcb97107.jpg" class="rounded-circle me-3" alt="Client" style="width: 60px; height: 60px;">
+                                    <div>
+                                        <h5 class="mb-0 fw-bold">Jenifer Lofez</h5>
+                                        <small class="text-muted">Jenifer Lofez</small>
+                                    </div>
+                                </div>
+                                <p class="mt-3 text-muted">
+                                    Pulvinar aliquam mi pellentesque rhoncus. Gravida at id sit in massa ultricies sem adipiscing.
+                                </p>
+                                <div class="position-absolute top-0 end-0 bg-warning p-3 rounded-bottom-start">
+                                    <h2 class="text-white fw-bold">“</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Témoignage 2 -->
+                <div class="carousel-item">
+                    <div class="row justify-content-left">
+                        <div class="col-md-5">
+                            <div class="card border-0 shadow-sm p-4">
+                                <div class="d-flex align-items-center">
+                                    <img src="https://i.pinimg.com/474x/80/30/e9/8030e91be70ae617b35e789e61bcf466.jpg" class="rounded-circle me-3" alt="Client" style="width: 60px; height: 60px;">
+                                    <div>
+                                        <h5 class="mb-0 fw-bold">Sophie Doe</h5>
+                                        <small class="text-muted">Client</small>
+                                    </div>
+                                </div>
+                                <p class="mt-3 text-muted">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisi est.
+                                </p>
+                                <div class="position-absolute top-0 end-0 bg-warning p-3 rounded-bottom-start">
+                                    <h2 class="text-white fw-bold">“</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-5 d-none d-md-block">
+                            <div class="card border-0 shadow-sm p-4">
+                                <div class="d-flex align-items-center">
+                                    <img src="https://i.pinimg.com/474x/fa/ad/fe/faadfe94785874cbd9c5097b738df0be.jpg" class="rounded-circle me-3" alt="Client" style="width: 60px; height: 60px;">
+                                    <div>
+                                        <h5 class="mb-0 fw-bold">Alex Brown</h5>
+                                        <small class="text-muted">Client</small>
+                                    </div>
+                                </div>
+                                <p class="mt-3 text-muted">
+                                    Integer posuere erat a ante venenatis dapibus posuere velit aliquet posuere velit aliquet .
+                                </p>
+                                <div class="position-absolute top-0 end-0 bg-warning p-3 rounded-bottom-start">
+                                    <h2 class="text-white fw-bold">“</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+              
+            
+
+        </div>
+    </div>
+</section>
+
+<div class="container text-center py-5">
+    <!-- Titre -->
+    <p class="text-warning fw-bold">Team Member</p>
+    <h2 class="fw-bold">Our Chef Team</h2>
+
+    <!-- Section des chefs -->
+    <div class="row mt-4">
+        <!-- Chef 1 -->
+        <div class="col-md-4">
+            <div class="card border-0 shadow-sm">
+                <img src="https://i.pinimg.com/474x/d2/35/47/d2354797cfb995122e8bf0248cb1fd76.jpg"class="card-img-top" alt="Chef">
+                <div class="card-body text-start">
+                    <h5 class="fw-bold">Devid James</h5>
+                    <p class="text-warning mb-1">Head Chef</p>
+                </div>
+                <div class="border-bottom border-3 border-warning"></div>
+            </div>
+        </div>
+
+        <!-- Chef 2 (Mise en avant) -->
+        <div class="col-md-4">
+            <div class="card border-0 shadow-sm bg-warning text-white">
+                <img src="https://i.pinimg.com/474x/46/6a/65/466a656fc3ac34236780c0d85a345b3c.jpg" class="card-img-top" alt="Chef">
+                <div class="card-body text-start">
+                    <h5 class="fw-bold">Enrique Ragins</h5>
+                    <p>Biryani Expert</p>
+                    <div>
+                        <i class="bi bi-facebook me-2"></i>
+                        <i class="bi bi-twitter me-2"></i>
+                        <i class="bi bi-instagram me-2"></i>
+                        <i class="bi bi-whatsapp"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chef 3 -->
+        <div class="col-md-4">
+            <div class="card border-0 shadow-sm">
+                <img src="https://i.pinimg.com/474x/19/0a/2e/190a2e7bb8e9afc6996171e8c792a254.jpg" class="card-img-top" alt="Chef">
+                <div class="card-body text-start">
+                    <h5 class="fw-bold">Jack Jonson</h5>
+                    <p class="text-warning mb-1">Pizza Expert</p>
+                </div>
+                <div class="border-bottom border-3 border-warning"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bouton "See All" -->
+    <div class="mt-4">
+        <button class="btn btn-warning rounded-pill px-4">See All</button>
+    </div>
+</div>
+
+<div class="container py-5">
+    <div class="row g-0">
+        <!-- Image -->
+        <div class="col-md-6">
+            <img src="https://i.pinimg.com/474x/6a/ef/63/6aef63cf78a6adf92aaa3560651a4a46.jpg" class="img-fluid h-100" alt="Restaurant">
+        </div>
+
+        <!-- Formulaire -->
+        <div class="col-md-6 bg-warning p-5">
+            <p class="text-uppercase fw-bold">Reservation</p>
+            <h2 class="fw-bold">Book a Table</h2>
+
+            <form>
+                <div class="row g-2">
+                    <div class="col-md-6">
+                        <input type="text" class="form-control border-dark" placeholder="Full name">
+                    </div>
+                    <div class="col-md-6">
+                        <input type="email" class="form-control border-dark" placeholder="Email">
+                    </div>
+                    <div class="col-md-6">
+                        <input type="tel" class="form-control border-dark" placeholder="Phone">
+                    </div>
+                    <div class="col-md-6">
+                        <input type="number" class="form-control border-dark" placeholder="Number of Person">
+                    </div>
+                    <div class="col-md-6">
+                        <input type="date" class="form-control border-dark">
+                    </div>
+                    <div class="col-md-6">
+                        <input type="time" class="form-control border-dark">
+                    </div>
+                </div>
+
+                <div class="mt-3">
+                    <textarea class="form-control border-dark" rows="3" placeholder="Your Message..."></textarea>
+                </div>
+
+                <div class="mt-4">
+                    <button class="btn btn-outline-dark rounded-pill px-4">Send Message</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<div class="container text-center my-5">
+    <p class="text-warning fw-bold">Blog</p>
+    <h2 class="fw-bold">See Our Latest News</h2>
+
+    <div class="row mt-4">
+        <div class="col-md-4">
+            <div class="card border-0 shadow-sm">
+                <img src="https://i.pinimg.com/474x/b6/94/0e/b6940e530fa87fdf8f4e9cdf5ccafc36.jpg" class="card-img-top" alt="Pizza">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between text-muted small">
+                        <span>👤 Admin</span>
+                        <span>💬 Comments 260</span>
+                    </div>
+                    <p class="mt-2">Nunc aliquet aliquam vitae leo a Ultricies eget.</p>
+                    <a href="#" class="text-warning text-decoration-none fw-bold">Read More &gt;</a>
+                </div>
+                <div class="position-absolute bottom-0 end-0 bg-warning text-dark px-3 py-1 fw-bold">
+                    23 Jul 2020
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card border-0 shadow-sm">
+                <img src="https://i.pinimg.com/474x/79/9c/25/799c25ee0f46f6dd328ebb9ea8396bd4.jpg" class="card-img-top" alt="Food">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between text-muted small">
+                        <span>👤 Admin</span>
+                        <span>💬 Comments 260</span>
+                    </div>
+                    <p class="mt-2">Nunc aliquet aliquam vitae leo a Ultricies eget.</p>
+                    <a href="#" class="text-warning text-decoration-none fw-bold">Read More &gt;</a>
+                </div>
+                <div class="position-absolute bottom-0 end-0 bg-warning text-dark px-3 py-1 fw-bold">
+                    23 Jul 2020
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card border-0 shadow-sm">
+                <img src="https://i.pinimg.com/474x/ef/9b/ba/ef9bba676ac73c9f727db77d40d07ddf.jpg" class="card-img-top" alt="Rice">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between text-muted small">
+                        <span>👤 Admin</span>
+                        <span>💬 Comments 260</span>
+                    </div>
+                    <p class="mt-2">Nunc aliquet aliquam vitae leo a Ultricies eget.</p>
+                    <a href="#" class="text-warning text-decoration-none fw-bold">Read More &gt;</a>
+                </div>
+                <div class="position-absolute bottom-0 end-0 bg-warning text-dark px-3 py-1 fw-bold">
+                    23 Jul 2020
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="d-flex justify-content-center mt-4">
+        <span class="mx-1 bg-warning rounded-circle d-inline-block" style="width: 10px; height: 10px;"></span>
+        <span class="mx-1 bg-secondary rounded-circle d-inline-block" style="width: 10px; height: 10px;"></span>
+        <span class="mx-1 bg-secondary rounded-circle d-inline-block" style="width: 10px; height: 10px;"></span>
+    </div>
+</div>
 
 
 
+<footer class="bg-dark text-white pt-5">
+    <div class="container">
+        <div class="row text-center text-md-start">
+            <!-- About Us -->
+            <div class="col-md-4 mb-4">
+                <h5 class="fw-bold">About Us</h5>
+                <p class="small">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis convallis sociis imperdiet nibh facilisis.</p>
+                <div class="d-flex align-items-center mb-2">
+                    <span class="bg-warning text-dark rounded-circle d-inline-flex align-items-center justify-content-center me-2" style="width: 35px; height: 35px;">
+                        📍
+                    </span>
+                    <span class="small">124 Anystreet, 3562<br> Anytown, NY 12345</span>
+                </div>
+                <div class="d-flex align-items-center">
+                    <span class="bg-warning text-dark rounded-circle d-inline-flex align-items-center justify-content-center me-2" style="width: 35px; height: 35px;">
+                        📞
+                    </span>
+                    <span class="small">(321) 658 996 89<br> +321 523 658 25</span>
+                </div>
+                <div class="mt-3">
+                    <a href="#" class="me-2" style="color: #1877F2;"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="me-2" style="color: #E4405F;"><i class="bi bi-instagram"></i></a>
+                    <a href="#" class="me-2" style="color: #25D366;"><i class="bi bi-whatsapp"></i></a>
+                    <a href="#" class="me-2" style="color: #0077B5;"><i class="bi bi-linkedin"></i></a>
+                </div>
+            </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
-</body>
-</html>
+            <!-- Contact Form -->
+            <div class="col-md-4 mb-4">
+                <div class="bg-white text-dark p-4 rounded shadow">
+                    <h5 class="fw-bold text-center">Say Hello! to us</h5>
+                    <form>
+                        <input type="text" class="form-control mb-2" placeholder="Your Name">
+                        <input type="email" class="form-control mb-2" placeholder="Your Email">
+                        <textarea class="form-control mb-3" placeholder="Message"></textarea>
+                        <button class="btn btn-warning w-100 fw-bold">Send Message</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Instagram Photos -->
+            <div class="col-md-4 mb-4">
+                <h5 class="fw-bold">Instagram Photos</h5>
+                <div class="row g-2">
+                    <div class="col-4"><img src="https://i.pinimg.com/474x/49/bd/c8/49bdc8e3f288a19ebd0fc46ba1afbbf2.jpg" class="img-fluid rounded" alt="Photo 1"></div>
+                    <div class="col-4"><img src="https://i.pinimg.com/474x/e2/6d/f9/e26df91e648cb164b612ff652669e082.jpg" class="img-fluid rounded" alt="Photo 2"></div>
+                    <div class="col-4"><img src="https://i.pinimg.com/474x/bc/52/f1/bc52f19aaff7ad1e98cd0881c3d9e553.jpg" class="img-fluid rounded" alt="Photo 3"></div>
+                    <div class="col-4"><img src="https://i.pinimg.com/474x/1e/a7/c1/1ea7c15a73b4244ad8b317d8dfba8dde.jpg" class="img-fluid rounded" alt="Photo 4"></div>
+                    <div class="col-4"><img src="https://i.pinimg.com/474x/86/6c/d2/866cd2867f9f2b7e6e3594fb1b8230dd.jpg" class="img-fluid rounded" alt="Photo 5"></div>
+                    <div class="col-4"><img src="https://i.pinimg.com/474x/6a/7e/42/6a7e4264bb2efb7337eb69cb9e761f22.jpg" class="img-fluid rounded" alt="Photo 6"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="bg-warning text-dark text-center py-3 mt-4">
+        Copyright © ZiouJdainRoman
+    </div>
+</footer>
